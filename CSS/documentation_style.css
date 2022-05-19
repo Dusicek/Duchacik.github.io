@@ -1,0 +1,420 @@
+nav .nav-links li:nth-child(2) a {
+    color: #404EED;
+    text-decoration: underline;
+}
+/*main */
+main {
+    min-height: 75vh;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 15vh 2vw 5vh 7vw;
+
+    row-gap: 2vh;
+}
+
+h2 {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+
+    padding-bottom: 1vh;
+    text-decoration: underline;
+}
+
+main p {
+    padding-left: 2vw;
+}
+
+.line {
+    width: 90vw;
+    height: 3px;
+
+    background-color: #1c1c1c;
+
+    display: flex;
+
+    margin: 1vh 0 1vh 0;
+}
+
+article {
+    padding: 0 1vw 0 5vw;
+    margin-bottom: 2vh;
+}
+
+article p {
+    opacity: 0.6;
+}
+
+.code.block {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    
+    border: 1px #242424 solid;
+    border-radius: 2px;
+    
+    padding: 10px 13px 10px 13px;
+    margin: 2vh 6vw 2vh 2vw;
+}
+
+.code.block p {
+    padding: 0;
+}
+
+/*sidebar ↓ */
+aside {
+    width: 22vw;
+    height: 94vh;
+
+    background-color: #1c1c1c;
+
+    position: fixed;
+    top: 6vh;
+    left: 0;
+
+    transition: all 0.75s ease;
+    user-select: none;
+
+    z-index: 69;
+}
+
+aside li {
+    position: relative;
+    list-style: none;
+    transition: all 0.4 ease;
+}
+
+aside li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+aside i.fa-solid {
+    width: 7vh;
+
+    font-size: 25px;
+    color: whitesmoke;
+    line-height: 4.6vh;
+    text-align: center;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.link_name {
+    font-size: 18px;
+    font-weight: 400;
+    color: whitesmoke;
+
+    transition: all 0.4s ease;
+}
+
+.side-link li.showMenu .sub-menu {
+    display: block;
+}
+
+.sub-menu {
+    opacity: 1;
+
+    padding: 0.4vw;
+    pointer-events: none;
+}
+
+aside .sub-menu a {
+    color: rgba(245, 245, 245, 0.6);
+    font-size: 15px;
+    
+    background-color: #1c1c1c;
+
+    gap: 4px;
+    transition: all 0.3s ease;
+    padding-left: 5vw;
+}
+
+.sub-menu .link_name {
+    display: none;
+}
+
+.side-link li:hover .sub-menu.blank {
+    top: 50%;
+}
+
+.side-link li:hover {
+    background: #242424;
+}
+
+aside .side-link li .sub-menu li:hover {
+    background-color: #242424;
+}
+
+.side-link li .sub-menu a:hover i,
+.side-link .sub-menu a:hover {
+    color: rgba(245, 245, 245, 1);
+
+    background-color: #242424;
+}
+
+/* closed sidebar ↓ */
+aside.closed {
+    width: 7vh;
+
+    transition: all 0.75s ease;
+
+    padding-top: 7vh;
+}
+
+aside.closed .side-link {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+aside.closed .sub-menu a {
+    white-space: nowrap;
+}
+
+aside.closed .link_name {
+    color: whitesmoke;
+
+    display: none;
+    
+    pointer-events: none;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul.sub-menu li a i {
+    min-width: 2.5vw;
+
+    color: rgba(245, 245, 245, 0.6);
+}
+
+.sub-menu {
+    display: none;
+}
+
+aside.closed .sub-menu {
+    left: 100%;
+
+    background: #242424;
+
+    opacity: 0;
+    display: block;
+
+    border-radius: 0 6px 6px 0;
+
+    position: absolute;
+    transition: 0s;
+}
+
+aside.closed .sub-menu a {
+    padding-left: 0;
+
+    background-color: #242424;
+}
+
+aside.closed .sub-menu .link_name {
+    padding: 5px;
+}
+
+aside.closed .side-link li:hover .sub-menu {
+    top: 0px;
+    opacity: 1;
+    pointer-events: auto;
+
+    transition: all 0.4s ease;
+}
+
+aside.closed .side-link li .sub-menu .link_name {
+    font-size: 18px;
+
+    display: block;
+
+    opacity: 1;
+}
+
+aside.closed .cover{
+    margin-bottom: 4vh;
+}
+
+/* changing direction of "arrow" when displaying sub categories ↓ */
+aside .side-link li.showMenu i.fa-chevron-down {
+    transform: rotate(-180deg);
+    transition-duration: 0.5s;
+}
+
+aside.closed .side-link i.fa-chevron-down {
+    display: none;
+}
+
+aside .side-link i.fa-chevron-down:hover {
+    color: #404EED;
+}
+
+/* "burger" for sidebar ↓ */
+.cover.closed {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    margin: 1vh 0 1vh 0;
+
+    transition: all 0.3s ease;
+}
+
+.cover {
+    width: 100%;
+
+    display: flex;
+    justify-content: end;
+
+    margin: 1vh 0 3vh 0;
+
+    transition: all 0.3s ease;
+}
+
+.card {
+    display: block;
+}
+
+.card div {
+    width: 25px;
+    height: 3px;
+
+    background-color: whitesmoke;
+
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.card div:nth-child(2) {
+    width: 17px;
+}
+
+aside.closed .card:hover div:nth-child(2) {
+    transform: translateX(8px);
+    background-color: #404EED;
+    transition: all 0.4s ease;
+}
+
+.card div:nth-child(3) {
+    width: 9px;
+}
+
+aside.closed .card:hover div:nth-child(3) {
+    transform: translateX(16px);
+    background-color: #404EED;
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.active .row1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.active .row2 {
+    opacity: 0;
+}
+
+.active div:last-child {
+    width: 25px;
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.active:hover div{
+    background-color: #404EED;
+}
+
+@media screen and (max-width: 770px) {
+    .line {
+        width: 98vw;
+    }
+
+    aside.closed .side-link li .sub-menu {
+        display: none;
+    }
+
+    aside {
+        width: 45vw;
+    }
+
+    aside a {
+        line-height: 30px;
+        gap: 5px;
+
+        padding-left: 4px;
+    }
+
+    aside .sub-menu a {
+        gap: 7px;
+    }
+
+    aside .link_name {
+        font-size: 15px;
+    }
+
+    aside .icon-link {
+        padding-right: 5px;
+    }
+
+    aside i.fa-solid {
+        font-size: 20px;
+    }
+
+    aside .sub-menu a {
+        font-size: 11px;
+
+        /*padding-left: 4vw;*/
+    }
+
+    aside .sub-menu i.fa-solid {
+        font-size: 15px;
+    }
+
+    aside.closed {
+        width: 0;
+    }
+
+    aside.closed .side-link{
+        display: none;
+    }
+
+    aside.closed .card{
+        position: absolute;
+        top: 2vh;
+        right: -8vw;
+    }
+
+    aside .side-link i.fa-chevron-down {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 770px) and (max-width: 1360px) {
+    aside{
+        width: 30vw;
+    }
+
+    aside i.fa-solid {
+        font-size: 23px;
+    }
+}

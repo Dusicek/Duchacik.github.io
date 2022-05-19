@@ -1,0 +1,268 @@
+header {
+    width: 100%;
+
+    font-family: 'Poppins', sans-serif;
+
+    background-color: #1f2124;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+
+    padding-top: 18vh;
+    padding-bottom: 12vh;
+}
+
+.header.info {
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 50px;
+}
+
+.header.main {
+    width: 100%;
+    font-size: 50px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.logoMain {
+    width: 250px;
+    height: 250px;
+
+    background-image: url("https://cdn.discordapp.com/attachments/955095269316374599/962762796897034290/SM_rounded_logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 469px;
+    -webkit-box-shadow: 0 4px 40px 0 #36393E;
+            box-shadow: 0 4px 40px 0 #36393E;
+}
+
+.header.text {
+    width: 100%;
+
+    text-align: center;
+    line-height: 25px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.waves {
+    width: 100%;
+    height: 30vh;
+
+    background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 1880 300' width='1880' height='300' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Crect x='0' y='0' width='1880' height='300' fill='%2336393E'%3E%3C/rect%3E%3Cpath d='M0 205L26.2 203.5C52.3 202 104.7 199 156.8 187.7C209 176.3 261 156.7 313.2 152.7C365.3 148.7 417.7 160.3 470 171.7C522.3 183 574.7 194 626.8 196.3C679 198.7 731 192.3 783.2 188.7C835.3 185 887.7 184 940 186.7C992.3 189.3 1044.7 195.7 1096.8 197.7C1149 199.7 1201 197.3 1253.2 194.5C1305.3 191.7 1357.7 188.3 1410 188.5C1462.3 188.7 1514.7 192.3 1566.8 184.2C1619 176 1671 156 1723.2 151.5C1775.3 147 1827.7 158 1853.8 163.5L1880 169L1880 0L1853.8 0C1827.7 0 1775.3 0 1723.2 0C1671 0 1619 0 1566.8 0C1514.7 0 1462.3 0 1410 0C1357.7 0 1305.3 0 1253.2 0C1201 0 1149 0 1096.8 0C1044.7 0 992.3 0 940 0C887.7 0 835.3 0 783.2 0C731 0 679 0 626.8 0C574.7 0 522.3 0 470 0C417.7 0 365.3 0 313.2 0C261 0 209 0 156.8 0C104.7 0 52.3 0 26.2 0L0 0Z' fill='%23333538'%3E%3C/path%3E%3Cpath d='M0 114L26.2 121.5C52.3 129 104.7 144 156.8 142.2C209 140.3 261 121.7 313.2 121.7C365.3 121.7 417.7 140.3 470 142.3C522.3 144.3 574.7 129.7 626.8 122C679 114.3 731 113.7 783.2 114.7C835.3 115.7 887.7 118.3 940 117.2C992.3 116 1044.7 111 1096.8 116.7C1149 122.3 1201 138.7 1253.2 142.2C1305.3 145.7 1357.7 136.3 1410 135.2C1462.3 134 1514.7 141 1566.8 139.7C1619 138.3 1671 128.7 1723.2 122.7C1775.3 116.7 1827.7 114.3 1853.8 113.2L1880 112L1880 0L1853.8 0C1827.7 0 1775.3 0 1723.2 0C1671 0 1619 0 1566.8 0C1514.7 0 1462.3 0 1410 0C1357.7 0 1305.3 0 1253.2 0C1201 0 1149 0 1096.8 0C1044.7 0 992.3 0 940 0C887.7 0 835.3 0 783.2 0C731 0 679 0 626.8 0C574.7 0 522.3 0 470 0C417.7 0 365.3 0 313.2 0C261 0 209 0 156.8 0C104.7 0 52.3 0 26.2 0L0 0Z' fill='%232c2e31'%3E%3C/path%3E%3Cpath d='M0 89L26.2 90.3C52.3 91.7 104.7 94.3 156.8 98.2C209 102 261 107 313.2 104.5C365.3 102 417.7 92 470 89C522.3 86 574.7 90 626.8 89.8C679 89.7 731 85.3 783.2 81.7C835.3 78 887.7 75 940 76.5C992.3 78 1044.7 84 1096.8 82.2C1149 80.3 1201 70.7 1253.2 73.2C1305.3 75.7 1357.7 90.3 1410 98C1462.3 105.7 1514.7 106.3 1566.8 105.7C1619 105 1671 103 1723.2 102.2C1775.3 101.3 1827.7 101.7 1853.8 101.8L1880 102L1880 0L1853.8 0C1827.7 0 1775.3 0 1723.2 0C1671 0 1619 0 1566.8 0C1514.7 0 1462.3 0 1410 0C1357.7 0 1305.3 0 1253.2 0C1201 0 1149 0 1096.8 0C1044.7 0 992.3 0 940 0C887.7 0 835.3 0 783.2 0C731 0 679 0 626.8 0C574.7 0 522.3 0 470 0C417.7 0 365.3 0 313.2 0C261 0 209 0 156.8 0C104.7 0 52.3 0 26.2 0L0 0Z' fill='%2326282b'%3E%3C/path%3E%3Cpath d='M0 42L26.2 43C52.3 44 104.7 46 156.8 48.2C209 50.3 261 52.7 313.2 51.7C365.3 50.7 417.7 46.3 470 44C522.3 41.7 574.7 41.3 626.8 39.2C679 37 731 33 783.2 35.2C835.3 37.3 887.7 45.7 940 45.5C992.3 45.3 1044.7 36.7 1096.8 32.5C1149 28.3 1201 28.7 1253.2 35.2C1305.3 41.7 1357.7 54.3 1410 56.7C1462.3 59 1514.7 51 1566.8 46.8C1619 42.7 1671 42.3 1723.2 40.2C1775.3 38 1827.7 34 1853.8 32L1880 30L1880 0L1853.8 0C1827.7 0 1775.3 0 1723.2 0C1671 0 1619 0 1566.8 0C1514.7 0 1462.3 0 1410 0C1357.7 0 1305.3 0 1253.2 0C1201 0 1149 0 1096.8 0C1044.7 0 992.3 0 940 0C887.7 0 835.3 0 783.2 0C731 0 679 0 626.8 0C574.7 0 522.3 0 470 0C417.7 0 365.3 0 313.2 0C261 0 209 0 156.8 0C104.7 0 52.3 0 26.2 0L0 0Z' fill='%231f2124'%3E%3C/path%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+}
+
+article {
+    width: 80%;
+    height: 30vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.description {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.description a {
+    color: whitesmoke;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 45px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ilustration {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.images {
+    height: 30vh;
+    display: block;
+}
+
+.register {
+    height: 25vh;
+    display: block;
+}
+
+.big.article {
+    width: 80%;
+    height: 50vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.big.ilustration {
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.big.image {
+    height: 50vh;
+    display: block;
+}
+
+.results {
+    height: 50vh;
+    display: block;
+}
+
+.scheduled {
+    height: 40%;
+}
+
+@media screen and (max-width: 770px) {
+    header {
+        padding-bottom: 5vh;
+    }
+
+    .header.info {
+        gap: 20px;
+    }
+
+    .header.main {
+        font-size: 30px;
+
+        gap: 10px;
+    }
+
+    .logoMain {
+        width: 150px;
+        height: 150px;
+    }
+
+    .header.text {
+        font-size: 15px;
+    }
+
+    main {
+        gap: 10vh;
+    }
+
+    article {
+        height: auto;
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .big.article {
+        height: auto;
+    }
+
+    .description {
+        width: 95%;
+    }
+
+    .description h2 {
+        font-size: 25px;
+    }
+
+    .description p {
+        font-size: 15px;
+    }
+
+    .description a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .images,
+    .register,
+    .scheduled,
+    .big.image,
+    .results {
+        width: 80vw;
+        height: auto;
+    }
+
+    .big.article {
+        flex-direction: column-reverse;
+    }
+
+    .big.article:last-child {
+        flex-direction: column;
+    }
+
+    footer {
+        margin-top: 20vh;
+    }
+}
+
+@media screen and (min-width: 770px) and (max-width: 1360px) {
+    article {
+        gap: 40px;
+    }
+
+    .big.article {
+        gap: 40px;
+    }
+
+    .images {
+        transform: scale(0.7);
+    }
+
+    .scheduled {
+        height: auto;
+        width: 47vw;
+    }
+
+    .results {
+        transform: scale(0.7);
+    }
+}
