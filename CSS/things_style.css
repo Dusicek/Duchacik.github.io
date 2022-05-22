@@ -215,6 +215,7 @@ footer a:hover {
 
 .code {
     color:#b9bbbe;
+    display: inline-block;
 
     background-color: #2f3136;
 
@@ -303,9 +304,9 @@ i {
     }
 
     footer h6 {
-        font-size: 20px;
+        font-size: 18px;
     }
-    
+
     .button {
         width: 75%;
 
@@ -343,6 +344,10 @@ i {
     .footer.left .button {
         margin-top: 5px;
         padding: 8px 12px 8px 12px;
+    }
+
+    .code {
+        padding: 0 2px 0 2px;
     }
 }
 
