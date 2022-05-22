@@ -9,7 +9,7 @@ main {
     display: flex;
     flex-direction: column;
 
-    padding: 15vh 2vw 5vh 7vw;
+    padding: 15vh 2vw 0 7vw;
 
     row-gap: 2vh;
 }
@@ -35,8 +35,18 @@ main p {
     padding-left: 2vw;
 }
 
+main a {
+    color: #404EED;
+    opacity: 1;
+    text-decoration: none;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
 .line {
-    width: 90vw;
+    width: 89vw;
     height: 3px;
 
     background-color: #1c1c1c;
@@ -46,13 +56,23 @@ main p {
     margin: 1vh 0 1vh 0;
 }
 
+.line.small {
+    width: 85vw;
+    height: 3px;
+
+    background-color: #2f3136;
+
+    display: flex;
+
+    margin: 1vh 0 1vh 4vw;
+}
+
 article {
-    padding: 0 1vw 0 5vw;
-    margin-bottom: 2vh;
+    padding: 0 1vw 0 3vw;
 }
 
 article p {
-    opacity: 0.6;
+    color: rgba(245, 245, 245, 0.5);
 }
 
 .code.block {
@@ -69,6 +89,13 @@ article p {
 
 .code.block p {
     padding: 0;
+}
+
+article li {
+    line-height: 24px;
+
+    padding-left: 4vw;
+    list-style: none;
 }
 
 /*sidebar ↓ */
@@ -122,11 +149,11 @@ aside i.fa-solid {
 
 .side-link li.showMenu .sub-menu {
     display: block;
+
+    padding: 0;
 }
 
-.sub-menu {
-    opacity: 1;
-
+aside.closed .sub-menu {
     padding: 0.4vw;
     pointer-events: none;
 }
@@ -139,7 +166,16 @@ aside .sub-menu a {
 
     gap: 4px;
     transition: all 0.3s ease;
-    padding-left: 5vw;
+    padding-left: 3vw;
+}
+
+.sub-menu.blank {
+    opacity: 1;
+    pointer-events: auto;
+
+    padding: 0.4vw;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .sub-menu .link_name {
@@ -345,8 +381,33 @@ aside.closed .card:hover div:nth-child(3) {
 }
 
 @media screen and (max-width: 770px) {
+    main {
+        padding: 15vh 2vw 0 2vw;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    main p {
+        font-size: 15px;
+    }
+
     .line {
-        width: 98vw;
+        width: 94vw;
+    }
+
+    article {
+        padding: 0 1vw 0 2vw;
+        line-height: 20px;
+    }
+
+    .line.small {
+        width: 90vw;
     }
 
     aside.closed .side-link li .sub-menu {
@@ -377,6 +438,7 @@ aside.closed .card:hover div:nth-child(3) {
     }
 
     aside i.fa-solid {
+        width: 5vh;
         font-size: 20px;
     }
 
@@ -410,6 +472,10 @@ aside.closed .card:hover div:nth-child(3) {
 }
 
 @media screen and (min-width: 770px) and (max-width: 1360px) {
+    main {
+        padding: 15vh 2vw 0 9vw;
+    }
+
     aside{
         width: 30vw;
     }
