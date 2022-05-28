@@ -463,7 +463,7 @@ aside.closed .card:hover div:nth-child(3) {
     aside.closed .card{
         position: absolute;
         top: 2vh;
-        right: -8vw;
+        left: 2vw;
     }
 
     aside .side-link i.fa-chevron-down {
