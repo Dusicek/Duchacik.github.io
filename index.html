@@ -14,7 +14,12 @@
     
 </head>
 
-<body>
+<body class="loading">
+
+    <div class="loading-page">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
     <nav>
         <a href="index.html">
             <div class="logo"></div>
@@ -60,19 +65,19 @@
                 <a href="documentation/documentation.html"><div class="button">Start your registrations now</div></a>
             </div>
 
-            <img class="register" src="https://media.discordapp.net/attachments/955095269316374599/963737072693297152/Register.png?width=541&height=239" alt="Registration">
+            <img loading="lazy" class="register" src="https://media.discordapp.net/attachments/955095269316374599/963737072693297152/Register.png?width=541&height=239" alt="Registration">
         </article>
 
-        <div class="big article">
+        <div class="big-article">
             <div class="big ilustration">
-                <img class="big image" src="https://media.discordapp.net/attachments/955095269316374599/965175460008972288/Scheduled_config.png?width=518&height=625" alt="Scheduled-scrims">
+                <img loading="lazy" class="big image" src="https://media.discordapp.net/attachments/955095269316374599/965175460008972288/Scheduled_config.png?width=518&height=625" alt="Scheduled-scrims">
             </div>
 
             <div class="description">
                 <h2>Scheduled-scrims</h2>
                 <p>Open your scrims registration, confirmation, waitlist every week in given time and day. You can open them more times a day or week – even every day.</p>
                 <a href="documentation/scrims-schedule.html"><div class="button">How to do schedule</div></a>
-                <img class="scheduled" src="https://media.discordapp.net/attachments/955095269316374599/963737073758638100/Scheduled.png?width=1066&height=240" alt="Scheduled">
+                <img loading="lazy" class="scheduled" src="https://media.discordapp.net/attachments/955095269316374599/963737073758638100/Scheduled.png?width=1066&height=240" alt="Scheduled">
             </div>
         </div>
         
@@ -84,13 +89,13 @@
             </div>
 
             <div class="ilustration">
-                <img class="images" src="https://media.discordapp.net/attachments/955095269316374599/963737073242746920/Roster.png?width=924&height=468" alt="Roster">
+                <img loading="lazy" class="images" src="https://media.discordapp.net/attachments/955095269316374599/963737073242746920/Roster.png?width=924&height=468" alt="Roster">
             </div>
         </article>
         
-        <div class="big article">
+        <div class="big-article">
             <div class="ilustration">
-                <img class="results" src="https://media.discordapp.net/attachments/955095269316374599/965202082963537950/Results.png?width=1870&height=1352" alt="Results">
+                <img loading="lazy" class="results" src="https://media.discordapp.net/attachments/955095269316374599/965202082963537950/Results.png?width=1870&height=1352" alt="Results">
             </div>
 
             <div class="description">
@@ -100,7 +105,7 @@
             </div>
         </div>
         
-        <div class="big article">
+        <div class="big-article">
             <div class="description">
                 <h2>Custom messages</h2>
                 <p>Customize your Scrims Manager messages to suite better to your server.</p>
@@ -108,7 +113,7 @@
             </div>
 
             <div class="big ilustration">
-                <img class="big image" src="https://media.discordapp.net/attachments/955095269316374599/963737072475201576/Custom_messages.png?width=554&height=676" alt="Custom-mesages">
+                <img loading="lazy" class="big image" src="https://media.discordapp.net/attachments/955095269316374599/963737072475201576/Custom_messages.png?width=554&height=676" alt="Custom-mesages">
             </div>
         </div>
     </main>
@@ -132,19 +137,11 @@
     </footer>
 
     <script src="JavaScript/things_app.js"></script>
-    <script>//not creating seperated js file > it would be not worth it
-        const header = document.querySelector("header");
-
-        header.addEventListener("click", () => {
-                closeNav();
-        });
-    </script>
+    <script src="JavaScript/index_app.js"></script>
 </body>
 </html>
 
 <!--
-    12h+3h+3h+6h+1h+3h+6h+6h+3h+8h+5h+8h = 64h
-
     https://youtu.be/gXkqy0b4M5g
 
     https://www.codinglabweb.com/2021/06/dropdown-sidebar-menu-html-css.html
@@ -159,4 +156,10 @@
     https://www.svgbackgrounds.com/how-to-add-svgs-with-css-background-image/
     https://css-tricks.com/snippets/jquery/make-entire-div-clickable/
     https://css-tricks.com/snippets/css/scale-on-hover-with-webkit-transition/
+
+    loading page animations & lazy loading of images:
+    https://redstapler.co/add-loading-animation-to-website/
+    https://www.youtube.com/watch?v=s_hO8Pn3u5M
+    https://www.youtube.com/watch?v=AActXSWxsRo
+    if i want different load animation: https://www.youtube.com/watch?v=BwhTKJFpKSw
 -->

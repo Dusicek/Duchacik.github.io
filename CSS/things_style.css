@@ -19,6 +19,11 @@ body {
 
     display: flex;
     flex-direction: column;
+    overflow: auto;
+}
+
+body.loading{
+    overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -35,6 +40,8 @@ body {
 
 ::-webkit-scrollbar-thumb {
     background: #2f3136;
+
+    border-radius: 5px;
 
     cursor: pointer;
 }
@@ -215,6 +222,102 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* loading page animation ↓*/
+.loading-page {
+    width: 100%;
+    height: 100%;
+
+    background-color: #1c1c1c;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    z-index: 420;
+    top: 0;
+    left: 0;
+}
+
+.loader {
+    width: 30px;
+    height: 30px;
+
+    display: inline-block;
+    position: relative;
+    border: 4px solid #Fff;
+
+    animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+    width: 100%;
+
+    background-color: #fff;
+
+    display: inline-block;
+
+    vertical-align: top;
+
+    animation: loader-inner 2s infinite ease-in;
+}
+
+.disappear {
+    animation: vanish 1s forwards;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(180deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-inner {
+    0% {
+        height: 0%;
+    }
+
+    25% {
+        height: 0%;
+    }
+
+    50% {
+        height: 100%;
+    }
+
+    75% {
+        height: 100%;
+    }
+
+    100% {
+        height: 0%;
+    }
+}
+
+@keyframes vanish {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* additional stuff ↓ */
 .code {
     color:#b9bbbe;
     display: inline-block;

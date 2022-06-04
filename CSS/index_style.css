@@ -94,6 +94,9 @@ article {
     align-items: center;
 
     gap: 30px;
+
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
 }
 
 .description {
@@ -137,7 +140,7 @@ h2 {
     display: block;
 }
 
-.big.article {
+.big-article {
     width: 80%;
     height: 50vh;
 
@@ -146,6 +149,9 @@ h2 {
     align-items: center;
 
     gap: 30px;
+
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
 }
 
 .big.ilustration {
@@ -168,6 +174,10 @@ h2 {
 
 .scheduled {
     height: 40%;
+}
+
+.appear {
+    opacity: 1;
 }
 
 @media screen and (max-width: 770px) {
@@ -205,7 +215,7 @@ h2 {
         gap: 20px;
     }
 
-    .big.article {
+    .big-article {
         height: auto;
     }
 
@@ -236,11 +246,11 @@ h2 {
         height: auto;
     }
 
-    .big.article {
+    .big-article {
         flex-direction: column-reverse;
     }
 
-    .big.article:last-child {
+    .big-article:last-child {
         flex-direction: column;
     }
 
@@ -254,7 +264,7 @@ h2 {
         gap: 40px;
     }
 
-    .big.article {
+    .big-article {
         gap: 40px;
     }
 

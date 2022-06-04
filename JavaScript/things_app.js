@@ -6,6 +6,15 @@ const main = document.querySelector("main");
 const footer = document.querySelector("footer");
 const body = document.querySelector("body");
 
+const loading = document.querySelector(".loading-page")
+
+window.addEventListener("load", vanish);
+
+function vanish() {
+    loading.classList.add("disappear");
+    body.classList.remove("loading");
+}
+
 function closeNav() {
     nav.className = "nav-links";
     menu.className = "menu";
@@ -14,7 +23,8 @@ function closeNav() {
         link.style.animation = "";
     });
 }
-//Toggle NAV
+
+// Toggle NAV
 menu.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
 
