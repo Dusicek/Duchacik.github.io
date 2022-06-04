@@ -99,6 +99,10 @@ article {
     transition: opacity 0.4s ease-in;
 }
 
+article p {
+    margin-bottom: 20px;
+}
+
 .description {
     width: 50%;
     height: 100%;

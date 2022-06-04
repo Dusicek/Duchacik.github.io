@@ -2,11 +2,15 @@ const menu = document.querySelector(".menu");
 const nav = document.querySelector(".nav-links");
 const navLinks = document.querySelectorAll(".nav-links li");
 
+const navbar = document.querySelector("nav");
+
 const main = document.querySelector("main");
 const footer = document.querySelector("footer");
 const body = document.querySelector("body");
 
-const loading = document.querySelector(".loading-page")
+const loading = document.querySelector(".loading-page");
+
+let scrollPoss = window.pageYOffset;
 
 window.addEventListener("load", vanish);
 
@@ -22,6 +26,19 @@ function closeNav() {
     navLinks.forEach((link, index) => {
         link.style.animation = "";
     });
+}
+
+// showing and hiding navbar on scroll
+window.onscroll = function () {
+    const currentPoss = window.pageYOffset;
+    if (scrollPoss > currentPoss) {
+        navbar.style.top = "0vh";
+    }
+    
+    else {
+        navbar.style.top = "-11vh";
+    }
+    scrollPoss = currentPoss;
 }
 
 // Toggle NAV
@@ -52,6 +69,7 @@ footer.addEventListener("click", () => {
 });
 
 window.onload = function() {
+    navbar.style.top = "0vh";
     if (nav.style.transition) {
         nav.style.transition = "";
     }
