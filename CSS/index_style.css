@@ -99,7 +99,8 @@ article {
     transition: opacity 0.4s ease-in;
 }
 
-article p {
+article p,
+.big-article p {
     margin-bottom: 20px;
 }
 
@@ -256,10 +257,6 @@ h2 {
 
     .big-article:last-child {
         flex-direction: column;
-    }
-
-    footer {
-        margin-top: 20vh;
     }
 }
 

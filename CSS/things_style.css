@@ -223,7 +223,7 @@ footer a {
     text-decoration: none;
 }
 
-footer a:hover {
+.footer.right a:hover {
     text-decoration: underline;
 }
 
@@ -297,57 +297,6 @@ footer a .button:hover{
     animation: vanish 0.4s forwards;
 }
 
-@keyframes loader {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    25% {
-        transform: rotate(180deg);
-    }
-
-    50% {
-        transform: rotate(180deg);
-    }
-
-    75% {
-        transform: rotate(360deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes loader-inner {
-    0% {
-        height: 0%;
-    }
-
-    25% {
-        height: 0%;
-    }
-
-    50% {
-        height: 100%;
-    }
-
-    75% {
-        height: 100%;
-    }
-
-    100% {
-        height: 0%;
-    }
-}
-
-@keyframes vanish {
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
 /* additional stuff ↓ */
 .code {
     color:#b9bbbe;
@@ -397,10 +346,6 @@ i {
         height: 5vh;
     }
 
-    main {
-        padding-bottom: 10vh;
-    }
-
     .nav-links {
         height: 94vh;
         width: 50%;
@@ -448,6 +393,9 @@ i {
         font-size: 15px;
 
         padding: 8px 16px 8px 16px;
+    }
+
+    footer .button {
         margin-top: 10px;
         margin-left: 9px;
     }
@@ -484,6 +432,10 @@ i {
     .code {
         padding: 0 2px 0 2px;
     }
+
+        .nav-active {
+            transform: translateX(-60px);
+        }
 }
 
 @keyframes navLinkFade {
@@ -498,6 +450,53 @@ i {
     }
 }
 
-.nav-active {
-    transform: translateX(-60px);
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(180deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-inner {
+    0% {
+        height: 0%;
+    }
+
+    25% {
+        height: 0%;
+    }
+
+    50% {
+        height: 100%;
+    }
+
+    75% {
+        height: 100%;
+    }
+
+    100% {
+        height: 0%;
+    }
+}
+
+@keyframes vanish {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }

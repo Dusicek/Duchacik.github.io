@@ -1,6 +1,6 @@
 const menu = document.querySelector(".menu");
-const nav = document.querySelector(".nav-links");
-const navLinks = document.querySelectorAll(".nav-links li");
+const navLinks = document.querySelector(".nav-links");
+const navLinksLi = document.querySelectorAll(".nav-links li");
 
 const navbar = document.querySelector("nav");
 
@@ -9,24 +9,24 @@ const footer = document.querySelector("footer");
 const body = document.querySelector("body");
 
 const loading = document.querySelector(".loading-page");
-
 let scrollPoss = window.pageYOffset;
 
 window.addEventListener("load", vanish);
 
+
 function vanish() {
     loading.classList.add("disappear");
     body.classList.remove("loading");
-}
+};
 
 function closeNav() {
-    nav.className = "nav-links";
+    navLinks.className = "nav-links";
     menu.className = "menu";
 
-    navLinks.forEach((link, index) => {
+    navLinksLi.forEach((link, index) => {
         link.style.animation = "";
     });
-}
+};
 
 // showing and hiding navbar on scroll
 window.onscroll = function () {
@@ -34,22 +34,31 @@ window.onscroll = function () {
     if (scrollPoss > currentPoss) {
         navbar.style.top = "0vh";
     }
+
+    else if ((window.innerHeight + window.scrollY) >= (document.body.scrollHeight - 150 )) {
+        navbar.style.top = "0vh";
+    }
+
+    else if (scrollPoss < 150) {
+        navbar.style.top = "0vh";
+    }
     
     else {
         navbar.style.top = "-11vh";
     }
     scrollPoss = currentPoss;
-}
+};
 
 // Toggle NAV
 menu.addEventListener("click", () => {
-    nav.classList.toggle("nav-active");
+    navLinks.classList.toggle("nav-active");
 
     // Animate links
-    navLinks.forEach((link, index) => {
+    navLinksLi.forEach((link, index) => {
         if (link.style.animation) {
             link.style.animation = "";
         }
+
         else {
             link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
         }
@@ -70,10 +79,11 @@ footer.addEventListener("click", () => {
 
 window.onload = function() {
     navbar.style.top = "0vh";
-    if (nav.style.transition) {
-        nav.style.transition = "";
+    if (navLinks.style.transition) {
+        navLinks.style.transition = "";
     }
+
     else {
-        nav.style.transition = `transform 0.4s ease-in`;
+        navLinks.style.transition = `transform 0.4s ease-in`;
     }
-}
+};
