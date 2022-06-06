@@ -270,31 +270,98 @@ footer a .button:hover{
     left: 0;
 }
 
-.loader {
-    width: 30px;
-    height: 30px;
-
-    display: inline-block;
-    position: relative;
-    border: 4px solid #Fff;
-
-    animation: loader 2s infinite ease;
-}
-
-.loader-inner {
-    width: 100%;
-
-    background-color: #fff;
-
-    display: inline-block;
-
-    vertical-align: top;
-
-    animation: loader-inner 2s infinite ease-in;
-}
-
 .disappear {
     animation: vanish 0.4s forwards;
+}
+
+.loader {
+    height: 50px;
+    width: 50px;
+
+    animation: rotate 1s infinite;
+}
+
+.loader:before,
+.loader:after {
+    height: 20px;
+    width: 20px;
+
+    display: block;
+    
+    border-radius: 50%;
+    
+    content: '';
+}
+
+.loader:before { 
+    background-color: whitesmoke;
+
+    box-shadow: 30px 0 0 whitesmoke;
+
+    margin-bottom: 10px;
+    
+    animation: ball1 1s infinite;
+}
+
+.loader:after {
+    background-color: whitesmoke;
+    
+    box-shadow: 30px 0 0 whitesmoke;
+
+    animation: ball2 1s infinite;
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg) scale(0.8);
+        -moz-transform: rotate(0deg) scale(0.8);
+    }
+
+    50% {
+        -webkit-transform: rotate(360deg) scale(1.2);
+        -moz-transform: rotate(360deg) scale(1.2);
+    }
+
+    100% {
+        -webkit-transform: rotate(720deg) scale(0.8);
+        -moz-transform: rotate(720deg) scale(0.8);
+    }
+}
+
+@keyframes ball1 {
+    0% {
+        box-shadow: 30px 0 0 whitesmoke;
+    }
+
+    50% {
+        box-shadow: 0 0 0 whitesmoke;
+        margin-bottom: 0;
+        -webkit-transform: translate(15px, 15px);
+        -moz-transform: translate(15px, 15px);
+    }
+
+    100% {
+        box-shadow: 30px 0 0 whitesmoke;
+        margin-bottom: 10px;
+    }
+}
+
+@keyframes ball2 {
+    0% {
+        box-shadow: 30px 0 0 whitesmoke;
+    }
+
+    50% {
+        box-shadow: 0 0 0 whitesmoke;
+        margin-top: -20px;
+        -webkit-transform: translate(15px, 15px);
+        -moz-transform: translate(15px, 15px);
+    }
+
+    100% {
+        box-shadow: 30px 0 0 whitesmoke;
+        margin-top: 0;
+    }
 }
 
 /* additional stuff ↓ */
@@ -366,7 +433,7 @@ i {
         transform: translateX(100%);
 
         -webkit-box-shadow: 0 0 25px 30px #1c1c1c;
-        box-shadow: 0 0 25px 30px #1c1c1c;
+                box-shadow: 0 0 25px 30px #1c1c1c;
     }
 
     .nav-links li {
