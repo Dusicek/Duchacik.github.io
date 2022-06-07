@@ -50,10 +50,68 @@ main {
     padding-bottom: 100px;
 }
 
+/* loading page animation ↓*/
+.loading-page {
+    width: 100%;
+    height: 100%;
+
+    background-color: #1c1c1c;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    z-index: 420;
+    top: 0;
+    left: 0;
+}
+
+.disappear {
+    animation: vanish 0.4s forwards;
+}
+
+.loader {
+    height: 50px;
+    width: 50px;
+
+    animation: rotate 1s infinite;
+}
+
+.loader:before,
+.loader:after {
+    height: 20px;
+    width: 20px;
+
+    display: block;
+
+    border-radius: 50%;
+
+    content: '';
+}
+
+.loader:before {
+    background-color: whitesmoke;
+
+    box-shadow: 30px 0 0 whitesmoke;
+
+    margin-bottom: 10px;
+
+    animation: ball1 1s infinite;
+}
+
+.loader:after {
+    background-color: whitesmoke;
+
+    box-shadow: 30px 0 0 whitesmoke;
+
+    animation: ball2 1s infinite;
+}
+
 /*Navbar ↓ */
 nav {
     width: 100%;
-    min-height: 6vh;
+    height: 50px;
 
     background-color: #1c1c1c;
 
@@ -126,8 +184,8 @@ nav {
 }
 
 .logo {
-    height: 7vh;
-    width: 7vh;
+    height: 60px;
+    width: 60px;
 
     background-image: url("https://cdn.discordapp.com/attachments/955095269316374599/962767654781874256/SM_logo_S_rounded.png");
     background-repeat: no-repeat;
@@ -178,13 +236,21 @@ nav {
 /*footer ↓ */
 footer {
     width: 100%;
-    height: 25vh;
 
     background-color: #1c1c1c;
 
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+footer a {
+    color: whitesmoke;
+    letter-spacing: 2px;
+    text-decoration: none;
 }
 
 .footer.left {
@@ -202,7 +268,8 @@ footer {
     color: #818A95;
     font-size: 17px;
 
-    margin-top: 30px;
+    margin-top: 15px;
+    margin-left: 5px;
 }
 
 footer h6 {
@@ -215,16 +282,6 @@ footer h6 {
     flex-direction: column;
 
     gap: 20px;
-}
-
-footer a {
-    color: whitesmoke;
-    letter-spacing: 2px;
-    text-decoration: none;
-}
-
-.footer.right a:hover {
-    text-decoration: underline;
 }
 
 .button {
@@ -253,62 +310,153 @@ footer a .button:hover{
     transform: scale(1.1);
 }
 
-/* loading page animation ↓*/
-.loading-page {
-    width: 100%;
-    height: 100%;
+/* additional stuff ↓ */
+.code {
+    color:#b9bbbe;
+    display: inline-block;
 
-    background-color: #1c1c1c;
+    background-color: #2f3136;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: fixed;
-    z-index: 420;
-    top: 0;
-    left: 0;
+    padding: 1px 4px 1px 4px;
 }
 
-.disappear {
-    animation: vanish 0.4s forwards;
-}
+a.user {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
 
-.loader {
-    height: 50px;
-    width: 50px;
-
-    animation: rotate 1s infinite;
-}
-
-.loader:before,
-.loader:after {
-    height: 20px;
-    width: 20px;
-
-    display: block;
+    background-color: rgba(88, 101, 242, 0.8);
     
-    border-radius: 50%;
-    
-    content: '';
+    display: inline-block;
+
+    border-radius: 2px;
+
+    padding: 0px 3px 1px 2px;
+
+    cursor: pointer;
 }
 
-.loader:before { 
-    background-color: whitesmoke;
+a.user:hover {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: underline;
 
-    box-shadow: 30px 0 0 whitesmoke;
-
-    margin-bottom: 10px;
-    
-    animation: ball1 1s infinite;
+    background-color: #5865f2;
 }
 
-.loader:after {
-    background-color: whitesmoke;
-    
-    box-shadow: 30px 0 0 whitesmoke;
+b {
+    font-weight: bold;
+}
 
-    animation: ball2 1s infinite;
+i {
+    font-style: italic;
+}
+
+@media screen and (max-width: 770px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        height: 94vh;
+        width: 50%;
+
+        background-color: #1c1c1c;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 30px;
+
+        padding-top: 5%;
+
+        position: absolute;
+        top: 8vh;
+        right: -60px;
+        transform: translateX(100%);
+
+        -webkit-box-shadow: 0 0 25px 30px #1c1c1c;
+                box-shadow: 0 0 25px 30px #1c1c1c;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .menu {
+        display: block;
+
+        padding-right: 3%;
+    }
+
+    .logo {
+        transform: scale(0.75);
+    }
+
+    footer h6 {
+        font-size: 16px;
+    }
+
+    .button {
+        width: 75%;
+
+        font-size: 15px;
+
+        padding: 8px 16px 8px 16px;
+    }
+
+    footer .button {
+        margin-top: 10px;
+        margin-left: 9px;
+    }
+
+    .copyright {
+        font-size: 11px;
+
+        margin-left: 9px;
+    }
+
+    .footer.right {
+        padding-top: 15px;
+        gap: 17px;
+    }
+
+    .footer.right a {
+        font-size: 13px;
+    }
+
+    .flex-row {
+        justify-content: start;
+        gap: 0px;
+    }
+
+    .copyright {
+        margin-top: 15px;
+    }
+
+    .footer.left .button {
+        margin-top: 5px;
+        padding: 8px 12px 8px 12px;
+    }
+
+    .code {
+        padding: 0 2px 0 2px;
+    }
+
+    .nav-active {
+        transform: translateX(-60px);
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 @keyframes rotate {
@@ -361,203 +509,6 @@ footer a .button:hover{
     100% {
         box-shadow: 30px 0 0 whitesmoke;
         margin-top: 0;
-    }
-}
-
-/* additional stuff ↓ */
-.code {
-    color:#b9bbbe;
-    display: inline-block;
-
-    background-color: #2f3136;
-
-    padding: 1px 4px 1px 4px;
-}
-
-a.user {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-
-    background-color: rgba(88, 101, 242, 0.8);
-    
-    display: inline-block;
-
-    border-radius: 2px;
-
-    padding: 0px 3px 1px 2px;
-
-    cursor: pointer;
-}
-
-a.user:hover {
-    color: rgba(255, 255, 255, 1);
-    text-decoration: underline;
-
-    background-color: #5865f2;
-}
-
-b {
-    font-weight: bold;
-}
-
-i {
-    font-style: italic;
-}
-
-@media screen and (max-width: 770px) {
-    body {
-        overflow-x: hidden;
-    }
-
-    nav {
-        height: 5vh;
-    }
-
-    .nav-links {
-        height: 94vh;
-        width: 50%;
-
-        background-color: #1c1c1c;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-        gap: 30px;
-
-        padding-top: 5%;
-
-        position: absolute;
-        top: 8vh;
-        right: -60px;
-        transform: translateX(100%);
-
-        -webkit-box-shadow: 0 0 25px 30px #1c1c1c;
-                box-shadow: 0 0 25px 30px #1c1c1c;
-    }
-
-    .nav-links li {
-        opacity: 0;
-    }
-
-    .menu {
-        display: block;
-
-        padding-right: 3%;
-    }
-
-    .logo {
-        transform: scale(0.75);
-    }
-
-    footer h6 {
-        font-size: 18px;
-    }
-
-    .button {
-        width: 75%;
-
-        font-size: 15px;
-
-        padding: 8px 16px 8px 16px;
-    }
-
-    footer .button {
-        margin-top: 10px;
-        margin-left: 9px;
-    }
-
-    .copyright {
-        font-size: 11px;
-
-        margin-left: 9px;
-    }
-
-    .footer.right {
-        padding-top: 15px;
-        gap: 17px;
-    }
-
-    .footer.right a {
-        font-size: 14px;
-    }
-
-    .flex-row {
-        justify-content: start;
-        gap: 0px;
-    }
-
-    .copyright {
-        margin-top: 15px;
-    }
-
-    .footer.left .button {
-        margin-top: 5px;
-        padding: 8px 12px 8px 12px;
-    }
-
-    .code {
-        padding: 0 2px 0 2px;
-    }
-
-        .nav-active {
-            transform: translateX(-60px);
-        }
-}
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
-@keyframes loader {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    25% {
-        transform: rotate(180deg);
-    }
-
-    50% {
-        transform: rotate(180deg);
-    }
-
-    75% {
-        transform: rotate(360deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes loader-inner {
-    0% {
-        height: 0%;
-    }
-
-    25% {
-        height: 0%;
-    }
-
-    50% {
-        height: 100%;
-    }
-
-    75% {
-        height: 100%;
-    }
-
-    100% {
-        height: 0%;
     }
 }
 

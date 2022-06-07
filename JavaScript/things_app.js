@@ -13,7 +13,6 @@ let scrollPoss = window.pageYOffset;
 
 window.addEventListener("load", vanish);
 
-
 function vanish() {
     loading.classList.add("disappear");
     body.classList.remove("loading");
@@ -44,7 +43,7 @@ window.onscroll = function () {
     }
     
     else {
-        navbar.style.top = "-11vh";
+        navbar.style.top = "-90px";
     }
     scrollPoss = currentPoss;
 };

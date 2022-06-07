@@ -42,3 +42,31 @@ main.addEventListener("click", () => {
 footer.addEventListener("click", () => {
     closeAside();
 });
+
+window.onscroll = function () {
+    const currentPoss = window.pageYOffset;
+    if (scrollPoss > currentPoss) {
+        navbar.style.top = "0px";
+        aside.style.paddingTop = "75px";
+        card.style.top = "90px";
+    }
+
+    else if ((window.innerHeight + window.scrollY) >= (document.body.scrollHeight - 150)) {
+        navbar.style.top = "0px";
+        aside.style.paddingTop = "75px";
+        card.style.top = "90px";
+    }
+
+    else if (scrollPoss < 150) {
+        navbar.style.top = "0px";
+        aside.style.paddingTop = "75px";
+        card.style.top = "90px";
+    }
+
+    else {
+        navbar.style.top = "-90px";
+        aside.style.paddingTop = "20px";
+        card.style.top = "2vh";
+    }
+    scrollPoss = currentPoss;
+};

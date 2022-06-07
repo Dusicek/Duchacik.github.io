@@ -101,18 +101,16 @@ article li {
 /*sidebar ↓ */
 aside {
     width: 22vw;
-    height: 94vh;
+    height: 100vh;
 
     background-color: #1c1c1c;
 
     position: fixed;
-    top: 6vh;
-    left: 0;
+
+    padding-top: 75px;
 
     transition: all 0.75s ease;
     user-select: none;
-
-    z-index: 69;
 }
 
 aside li {
@@ -203,11 +201,9 @@ aside .side-link li .sub-menu li:hover {
 
 /* closed sidebar ↓ */
 aside.closed {
-    width: 7vh;
+    width: 60px;
 
     transition: all 0.75s ease;
-
-    padding-top: 7vh;
 }
 
 aside.closed .side-link {
@@ -462,8 +458,8 @@ aside.closed .card:hover div:nth-child(3) {
 
     aside.closed .card{
         position: absolute;
-        top: 2vh;
-        left: 2vw;
+        top: 90px;
+        left: 1vw;
     }
 
     aside .side-link i.fa-chevron-down {
