@@ -124,8 +124,8 @@ nav {
 
     z-index: 69;
 
-    -webkit-box-shadow: 0 0 25px 30px #1c1c1c;
-            box-shadow: 0 0 25px 30px #1c1c1c;
+    -webkit-box-shadow: 0 0 25px 25px #1c1c1c;
+            box-shadow: 0 0 25px 25px #1c1c1c;
 
     transition: top 0.5s ease;
 }

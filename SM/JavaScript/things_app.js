@@ -9,6 +9,11 @@ const footer = document.querySelector("footer");
 const body = document.querySelector("body");
 
 const loading = document.querySelector(".loading-page");
+
+// scrolling down > values of elements
+const navDefVal = "0px";
+const navHiddVal = "-90px";
+
 let scrollPoss = window.pageYOffset;
 
 window.addEventListener("load", vanish);
@@ -31,19 +36,19 @@ function closeNav() {
 window.onscroll = function () {
     const currentPoss = window.pageYOffset;
     if (scrollPoss > currentPoss) {
-        navbar.style.top = "0vh";
+        navbar.style.top = navDefVal;
     }
 
     else if ((window.innerHeight + window.scrollY) >= (document.body.scrollHeight - 150 )) {
-        navbar.style.top = "0vh";
+        navbar.style.top = navDefVal;
     }
 
     else if (scrollPoss < 150) {
-        navbar.style.top = "0vh";
+        navbar.style.top = navDefVal;
     }
     
     else {
-        navbar.style.top = "-90px";
+        navbar.style.top = navHiddVal;
     }
     scrollPoss = currentPoss;
 };
@@ -77,7 +82,6 @@ footer.addEventListener("click", () => {
 });
 
 window.onload = function() {
-    navbar.style.top = "0vh";
     if (navLinks.style.transition) {
         navLinks.style.transition = "";
     }

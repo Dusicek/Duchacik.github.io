@@ -1,10 +1,16 @@
-//aside
+// aside
 const card = document.querySelector(".card");
 const cover = document.querySelector(".cover");
 const aside = document.querySelector("aside");
 const arrow = document.querySelectorAll(".fa-chevron-down");
 
-//closing Aside
+// scrolling down > values of elements
+const asidePaddDefVal = "75px";
+const asidePaddMoveVal = "20px";
+const cardDefVal = "70px";
+const cardMoveVal = "10px";
+
+// closing Aside
 function closeAside() {
     aside.className = "closed";
     cover.className = "cover closed";
@@ -46,27 +52,27 @@ footer.addEventListener("click", () => {
 window.onscroll = function () {
     const currentPoss = window.pageYOffset;
     if (scrollPoss > currentPoss) {
-        navbar.style.top = "0px";
-        aside.style.paddingTop = "75px";
-        card.style.top = "90px";
+        navbar.style.top = navDefVal;
+        aside.style.paddingTop = asidePaddDefVal;
+        card.style.top = cardDefVal;
     }
 
     else if ((window.innerHeight + window.scrollY) >= (document.body.scrollHeight - 150)) {
-        navbar.style.top = "0px";
-        aside.style.paddingTop = "75px";
-        card.style.top = "90px";
+        navbar.style.top = navDefVal;
+        aside.style.paddingTop = asidePaddDefVal;
+        card.style.top = cardDefVal;
     }
 
     else if (scrollPoss < 150) {
-        navbar.style.top = "0px";
-        aside.style.paddingTop = "75px";
-        card.style.top = "90px";
+        navbar.style.top = navDefVal;
+        aside.style.paddingTop = asidePaddDefVal;
+        card.style.top = cardDefVal;
     }
 
     else {
-        navbar.style.top = "-90px";
-        aside.style.paddingTop = "20px";
-        card.style.top = "2vh";
+        navbar.style.top = navHiddVal;
+        aside.style.paddingTop = asidePaddMoveVal;
+        card.style.top = cardMoveVal;
     }
     scrollPoss = currentPoss;
 };
