@@ -14,7 +14,10 @@
     <script src="https://kit.fontawesome.com/7e3e7d3c46.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="loading">
+    <div class="loading-page">
+        <div class="loader"></div>
+    </div>
     <main>
         <div class="card">
             <span></span>
@@ -2123,6 +2126,17 @@
             </div>
         </div>
     </section>
+    <script>
+        const body = document.querySelector("body");
+        const loading = document.querySelector(".loading-page");
+
+        window.addEventListener("load", vanish);
+
+        function vanish() {
+            loading.classList.add("disappear");
+            body.classList.remove("loading");
+        };
+    </script>
 </body>
 
 </html>
