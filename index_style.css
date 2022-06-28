@@ -253,7 +253,7 @@ main .card .content {
 main .card:hover .content {
     left: -25px;
 
-    padding: 50px 40px;
+    padding: 30px  20px 30px 30px;
 }
 
 main .card .content h2 {
