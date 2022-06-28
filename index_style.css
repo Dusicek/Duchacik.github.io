@@ -152,7 +152,6 @@ main .card {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 30px;
     transition: 0.3s;
     pointer-events: all;
 }
@@ -326,7 +325,7 @@ section {
     flex-direction: column;
     overflow: hidden;
 
-    position: absolute;
+    position: fixed;
     user-select: none;
 }
 
@@ -434,22 +433,13 @@ section .row div i:last-child {
 }
 
 @media screen and (max-width: 725px) {
-    body {
-        overflow-y: auto;
-    }
-
     main {
         grid-template-columns: 320px;
         grid-auto-rows: 315px;
 
-        margin: 30px 0 30px 0;
-    }
+        top: 75px;
 
-    main .card {
-        margin: 0;
-    }
-
-    section {
-        display: none;
+        padding-bottom: 75px;
+        row-gap: 80px;
     }
 }
