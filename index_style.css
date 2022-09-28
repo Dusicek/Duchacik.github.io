@@ -283,6 +283,10 @@ main .card .content a {
     padding: 10px;
 }
 
+main .card:nth-child(2) {
+    display: none;
+}
+
 /* background animation ↓*/
 section {
     width: 100%;
