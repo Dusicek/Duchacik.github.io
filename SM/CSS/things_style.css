@@ -272,7 +272,7 @@ footer a {
     margin-left: 5px;
 }
 
-footer h6 {
+footer h3 {
     font-size: 25px;
     font-weight: bold;
 }
@@ -392,7 +392,7 @@ i {
         transform: scale(0.75);
     }
 
-    footer h6 {
+    footer h3 {
         font-size: 16px;
     }
 
