@@ -38,10 +38,13 @@ article li {
 }
 
 article li:last-child {
+    color: rgba(245, 245, 245, 0.5);
     font-size: 14px;
 
-    margin-left: 2vw;
+    margin-left: 3vw;
     padding-top: 4px;
+
+    list-style: none;
 }
 
 article li:last-child span {
