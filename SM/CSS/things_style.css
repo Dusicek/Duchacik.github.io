@@ -382,6 +382,10 @@ i {
         opacity: 0;
     }
 
+    .nav-links li:nth-child(2n) {
+        display: none;
+    }
+
     .menu {
         display: block;
 

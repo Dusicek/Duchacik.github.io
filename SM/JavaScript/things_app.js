@@ -89,4 +89,6 @@ window.onload = function() {
     else {
         navLinks.style.transition = `transform 0.4s ease-in`;
     }
+
+    navbar.style.top = "0px";
 };

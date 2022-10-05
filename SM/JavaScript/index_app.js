@@ -8,7 +8,7 @@ header.addEventListener("click", () => {
 
 // how big part of the element needs to be on page
 const apearOptions = {
-    threshold: 0.5
+    threshold: 0.1
 };
 
 // Observer(and function) for scrolling
