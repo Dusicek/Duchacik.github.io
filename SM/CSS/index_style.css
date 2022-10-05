@@ -4,7 +4,7 @@ header {
     font-family: 'Poppins', sans-serif;
 
     background-color: #1f2124;
-    background-image: url(../images/index_bg.jpeg);
+    background-image: url(../images/index_bg.webp);
     background-position-x: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,7 +41,7 @@ header {
     width: 200px;
     height: 200px;
 
-    background-image: url("../images/SM_rounded_logo.jpeg");
+    background-image: url(../images/SM_rounded_logo.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
