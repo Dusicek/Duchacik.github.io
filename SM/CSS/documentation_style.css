@@ -4,7 +4,6 @@ nav .nav-links li:nth-child(2) a {
 }
 /*main */
 main {
-    min-height: 75vh;
 
     display: flex;
     flex-direction: column;
@@ -374,6 +373,20 @@ aside.closed .card:hover div:nth-child(3) {
 
 .active:hover div{
     background-color: #404EED;
+}
+
+.important {
+    font-weight: 600;
+
+    background-color: rgba(64, 78, 237, 0.4);
+
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+
+    border: 2px #404EED solid;
+    border-radius: 15px;
 }
 
 @media screen and (max-width: 770px) {
