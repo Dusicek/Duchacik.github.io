@@ -387,6 +387,8 @@ aside.closed .card:hover div:nth-child(3) {
 
     border: 2px #404EED solid;
     border-radius: 15px;
+
+    text-align: center;
 }
 
 @media screen and (max-width: 770px) {
