@@ -275,6 +275,8 @@ footer a {
 footer h3 {
     font-size: 25px;
     font-weight: bold;
+    text-decoration: none;
+    padding-bottom: 0;
 }
 
 .footer.right {
