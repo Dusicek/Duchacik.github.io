@@ -15,6 +15,10 @@ main {
     padding-top: 15vh;
 }
 
+a {
+    color: #404EED;
+}
+
 article {
     width: 93vw;
     display: flex;
