@@ -179,8 +179,21 @@ nav {
             transform: scale(1);
 }
 
+#current {
+    color: #404EED;
+    text-decoration: underline;
+}
+
+#current::after {
+    content: none;
+}
+
 .nav-links:first-child {
     margin-left: 1vh;
+}
+
+.nav-links li:nth-child(2n) {
+    user-select: none;
 }
 
 .logo {

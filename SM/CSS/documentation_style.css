@@ -1,10 +1,13 @@
-nav .nav-links li:nth-child(2) a {
+nav .nav-links li:nth-child(3) a {
     color: #404EED;
     text-decoration: underline;
 }
+
+nav .nav-links li:nth-child(3) a::after {
+    content: none;
+}
 /*main */
 main {
-
     display: flex;
     flex-direction: column;
 
@@ -38,6 +41,10 @@ main a {
     color: #404EED;
     opacity: 1;
     text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
 }
 
 article a:hover {
