@@ -81,9 +81,10 @@ article p {
     
     border: 1px #242424 solid;
     border-radius: 2px;
+    gap: 4px;
     
     padding: 10px 13px 10px 13px;
-    margin: 2vh 6vw 2vh 2vw;
+    margin-left: 4vw;
 }
 
 .code.block p {
@@ -383,6 +384,8 @@ aside.closed .card:hover div:nth-child(3) {
     display: flex;
     justify-items: center;
     align-items: center;
+    flex-direction: column;
+    gap: 10px;
     padding: 10px;
 
     border: 2px #404EED solid;
@@ -404,7 +407,8 @@ aside.closed .card:hover div:nth-child(3) {
         font-size: 18px;
     }
 
-    main p {
+    main p,
+    .code.block li {
         font-size: 15px;
     }
 
