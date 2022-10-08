@@ -135,13 +135,10 @@ h2 {
     align-items: center;
 }
 
-.images {
-    height: 30vh;
-    display: block;
-}
-
 .register {
-    height: 25vh;
+    width: 50vw;
+    height: auto;
+
     display: block;
 }
 
@@ -173,12 +170,12 @@ h2 {
 }
 
 .results {
-    height: 50vh;
+    height: 45vh;
     display: block;
 }
 
 .scheduled {
-    height: 40%;
+    height: 34%;
 }
 
 .appear {
@@ -243,12 +240,11 @@ h2 {
         justify-content: center;
     }
 
-    .images,
     .register,
     .scheduled,
     .big.image,
     .results {
-        width: 80vw;
+        width: 90vw;
         height: auto;
     }
 
@@ -270,16 +266,12 @@ h2 {
         gap: 40px;
     }
 
-    .images {
-        transform: scale(0.7);
-    }
-
     .scheduled {
         height: auto;
         width: 47vw;
     }
 
     .results {
-        transform: scale(0.7);
+        transform: scale(0.75);
     }
 }
