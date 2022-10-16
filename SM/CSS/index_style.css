@@ -184,8 +184,7 @@ h2 {
 
 @media screen and (max-width: 900px) {
     header {
-        padding-bottom: 5vh;
-        height: 80vh;
+        padding-top: 90px;
     }
 
     .header.info {
@@ -205,6 +204,13 @@ h2 {
 
     .header.text {
         font-size: 15px;
+        margin-bottom: 10vh;
+    }
+
+    .waves {
+        height: 15vh;
+
+        box-shadow: 0 -20px 10px 10px #1f2124
     }
 
     main {
