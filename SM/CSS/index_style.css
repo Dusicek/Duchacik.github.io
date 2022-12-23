@@ -214,7 +214,7 @@ h2 {
     }
 
     main {
-        gap: 70px;
+        gap: 120px;
     }
 
     article {
@@ -258,7 +258,7 @@ h2 {
         flex-direction: column-reverse;
     }
 
-    .big-article:last-child {
+    .big-article:nth-child(3) {
         flex-direction: column;
     }
 }
