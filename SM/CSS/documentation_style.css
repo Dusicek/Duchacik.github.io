@@ -1,3 +1,9 @@
+:root {
+    --asideLineHeight: 4.6vh;
+    --asideMinLineHeight: 30px;
+    --asideMaxLineHeight: 55px;
+}
+
 nav .nav-links li:nth-child(3) a {
     color: #404EED;
     text-decoration: underline;
@@ -106,283 +112,352 @@ article li {
     list-style: none;
 }
 
-/*sidebar ↓ */
+/* ---------- Sidebar---------- */
+
 aside {
-    width: 22vw;
+    width: 25vw;
+    max-width: 500px;
     height: 100vh;
 
+    font-size: 18px;
+    color: whitesmoke;
+
     background-color: #1c1c1c;
+
+    user-select: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
 
     position: fixed;
 
     padding-top: 75px;
 
-    transition: all 0.75s ease;
-    user-select: none;
+    z-index: 1;
+
+    transition: width 0.6s ease;
 }
 
-aside li {
-    position: relative;
-    list-style: none;
-    transition: all 0.4 ease;
+aside::-webkit-scrollbar {
+    width: 5px;
 }
 
-aside li a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
+aside::-webkit-scrollbar-track {
+    background: #83858c;
 
-aside i.fa-solid {
-    width: 7vh;
-
-    font-size: 25px;
-    color: whitesmoke;
-    line-height: 4.6vh;
-    text-align: center;
+    box-shadow: inset 0 0 5px #2f2f2f;
 
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
-.link_name {
-    font-size: 18px;
-    font-weight: 400;
-    color: whitesmoke;
+aside::-webkit-scrollbar-thumb {
+    background: #3d3f44;
 
-    transition: all 0.4s ease;
+    border-radius: 5px;
+
+    cursor: pointer;
 }
 
-.side-link li.showMenu .sub-menu {
-    display: block;
+/* ---------- Aside menu ---------- */
 
-    padding: 0;
-}
-
-aside.closed .sub-menu {
-    padding: 0.4vw;
-    pointer-events: none;
-}
-
-aside .sub-menu a {
-    color: rgba(245, 245, 245, 0.6);
-    font-size: 15px;
-    
-    background-color: #1c1c1c;
-
-    gap: 4px;
-    transition: all 0.3s ease;
-    padding-left: 3vw;
-}
-
-.sub-menu.blank {
-    opacity: 1;
-    pointer-events: auto;
-
-    padding: 0.4vw;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.sub-menu .link_name {
-    display: none;
-}
-
-.side-link li:hover .sub-menu.blank {
-    top: 50%;
-}
-
-.side-link li:hover {
-    background: #242424;
-}
-
-aside .side-link li .sub-menu li:hover {
-    background-color: #242424;
-}
-
-.side-link li .sub-menu a:hover i,
-.side-link .sub-menu a:hover {
-    color: rgba(245, 245, 245, 1);
-
-    background-color: #242424;
-}
-
-/* closed sidebar ↓ */
-aside.closed {
-    width: 60px;
-
-    transition: all 0.75s ease;
-}
-
-aside.closed .side-link {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-}
-
-aside.closed .sub-menu a {
-    white-space: nowrap;
-}
-
-aside.closed .link_name {
-    color: whitesmoke;
-
-    display: none;
-    
-    pointer-events: none;
-}
-
-.icon-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-ul.sub-menu li a i {
-    min-width: 2.5vw;
-
-    color: rgba(245, 245, 245, 0.6);
-}
-
-.sub-menu {
-    display: none;
-}
-
-aside.closed .sub-menu {
-    left: 100%;
-
-    background: #242424;
-
-    opacity: 0;
-    display: block;
-
-    border-radius: 0 6px 6px 0;
-
-    position: absolute;
-    transition: 0s;
-}
-
-aside.closed .sub-menu a {
-    padding-left: 0;
-
-    background-color: #242424;
-}
-
-aside.closed .sub-menu .link_name {
-    padding: 5px;
-}
-
-aside.closed .side-link li:hover .sub-menu {
-    top: 0px;
-    opacity: 1;
-    pointer-events: auto;
-
-    transition: all 0.4s ease;
-}
-
-aside.closed .side-link li .sub-menu .link_name {
-    font-size: 18px;
-
-    display: block;
-
-    opacity: 1;
-}
-
-aside.closed .cover{
-    margin-bottom: 4vh;
-}
-
-/* changing direction of "arrow" when displaying sub categories ↓ */
-aside .side-link li.showMenu i.fa-chevron-down {
-    transform: rotate(-180deg);
-    transition-duration: 0.5s;
-}
-
-aside.closed .side-link i.fa-chevron-down {
-    display: none;
-}
-
-aside .side-link i.fa-chevron-down:hover {
-    color: #404EED;
-}
-
-/* "burger" for sidebar ↓ */
-.cover.closed {
-    width: 100%;
+.asideMenuContainer {
+    cursor: pointer;
 
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 10px;
 
-    margin: 1vh 0 1vh 0;
-
-    transition: all 0.3s ease;
+    margin-bottom: 3.5vh;
 }
 
-.cover {
-    width: 100%;
+aside.closed .asideMenuContainer {
+    width: 60px;
 
-    display: flex;
-    justify-content: end;
+    cursor: default;
 
-    margin: 1vh 0 3vh 0;
-
-    transition: all 0.3s ease;
+    justify-content: center;
 }
 
-.card {
+.asideMenuContainer span {
+    margin-left: 17px;
+    font-weight: 400;
+
+    transition: color 0.3s ease;
+}
+
+aside.closed .asideMenuContainer span {
+    position: absolute;
+
+    visibility: hidden;
+}
+
+.asideMenuContainer:hover span {
+    color: #404EED;
+}
+
+.asideMenu {
+    cursor: pointer;
+
     display: block;
 }
 
-.card div {
-    width: 25px;
+.asideMenu div {
+    width: 26px;
     height: 3px;
 
     background-color: whitesmoke;
 
     margin: 5px;
+
     transition: all 0.3s ease;
 }
 
-.card div:nth-child(2) {
-    width: 17px;
-}
-
-aside.closed .card:hover div:nth-child(2) {
-    transform: translateX(8px);
-    background-color: #404EED;
-    transition: all 0.4s ease;
-}
-
-.card div:nth-child(3) {
-    width: 9px;
-}
-
-aside.closed .card:hover div:nth-child(3) {
-    transform: translateX(16px);
-    background-color: #404EED;
-    transition: all 0.4s ease;
-}
-
-.card:hover {
-    cursor: pointer;
-}
-
-.active .row1 {
+.asideMenu div:first-child {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-.active .row2 {
+.asideMenu div:nth-child(2) {
     opacity: 0;
 }
 
-.active div:last-child {
-    width: 25px;
+.asideMenu div:last-child {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-.active:hover div{
+aside:not(.closed) .asideMenuContainer:hover .asideMenu div,
+aside.closed .asideMenu:hover div:not(:first-child) {
     background-color: #404EED;
 }
+
+aside.closed .asideMenu div:first-child {
+    transform: none;
+}
+
+aside.closed .asideMenu div:nth-child(2) {
+    width: 18px;
+
+    opacity: 1;
+}
+
+aside.closed .asideMenu div:last-child {
+    width: 10px;
+
+    transform: none;
+}
+
+aside.closed .asideMenu:hover div:nth-child(2) {
+    transform: translateX(8px);
+    transition: all 0.3s ease;
+}
+
+aside.closed .asideMenu:hover div:last-child {
+    transform: translateX(16px);
+    transition: all 0.3s ease;
+}
+
+/* ---------- Sidebar links ---------- */
+
+aside a {
+    height: var(--asideLineHeight);
+    min-height: var(--asideMinLineHeight);
+    max-height: var(--asideMaxLineHeight);
+    width: 100%;
+
+    color: whitesmoke;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    position: relative;
+}
+
+aside i.fa-solid {
+    width: 60px;
+
+    font-size: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    cursor: pointer;
+}
+
+aside > a span {
+    height: var(--asideLineHeight);
+    min-height: var(--asideMinLineHeight);
+    max-height: var(--asideMaxLineHeight);
+
+    font-size: 18px;
+    font-weight: 400;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    white-space: pre;
+
+    transition: all 0.2s ease;
+}
+
+aside > a:hover,
+aside > .subMenu:hover {
+    background-color: #242424;
+
+    transition: all 0.2s ease;
+}
+
+/* ---------- Closed sidebar ---------- */
+
+aside.closed {
+    width: 60px;
+}
+
+aside.closed > a i.fa-solid {
+    padding: 0;
+}
+
+aside.closed > a span,
+.subMenuLinks {
+    position: absolute;
+    left: 60px;
+
+    visibility: hidden;
+
+    border-radius: 0 6px 6px 0;
+
+    padding: 0 20px;
+
+    transition: all 0.2s ease;
+}
+
+aside.closed > a:hover > span {
+    background-color: #242424;
+    
+    visibility: visible;
+
+    transition: all 0.2s ease;
+}
+
+/* ---------- Sidebar links subMenu ---------- */
+.subMenu {
+    width: 100%;
+
+    display: flex;
+
+    position: relative;
+}
+
+.subMenu a {
+    width: auto;
+
+    white-space: pre;
+}
+
+.subMenu i.fa-chevron-down {
+    height: var(--asideLineHeight);
+    min-height: var(--asideMinLineHeight);
+    max-height: var(--asideMaxLineHeight);
+    
+    width: auto;
+
+    position: absolute;
+
+    right: 15px;
+
+    z-index: 2;
+}
+
+aside:not(.closed) i.fa-chevron-down {
+    transition: visibility 0s ease 0.2s, rotate 0.3s ease, color 0.2s ease;
+}
+
+aside.closed i.fa-chevron-down {
+    visibility: hidden;
+
+    left: 20px;
+}
+
+.subMenu i.fa-chevron-down:hover {
+    color: #404EED;
+}
+
+.subMenu.showMenu i.fa-chevron-down {
+    rotate: -180deg;
+}
+
+.subMenu a > i {
+    width: 60px;
+}
+
+.subMenuLinks {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 0 5px 0;
+
+    transition-duration: 0s;
+}
+
+.subMenuLinks a {
+    transition: all 0.2s ease;
+}
+
+aside.closed .subMenuLinks a {
+    padding: 0 20px;
+}
+
+aside:not(.closed) .subMenuLinks a:first-child{
+    visibility: visible;
+}
+
+aside.closed .subMenu:hover .subMenuLinks {
+    background-color: #242424;
+    
+    visibility: visible;
+
+    transition: all 0.2s ease;
+}
+
+aside:not(.closed) .subMenu.showMenu .subMenuLinks {
+    position: static;
+
+    visibility: visible;
+}
+
+.subMenuLinks a:not(:first-child) {
+    color: rgba(245, 245, 245, 0.6);
+    font-size: 15px;
+
+    transition: color 0.2s ease;
+}
+
+.subMenuLinks a:not(:first-child):hover {
+    color: whitesmoke;
+
+    background-color: #242424;
+
+    transition: color 0.2s ease;
+}
+
+@media screen and (max-width: 1250px) {
+    aside {
+        width: 33vw;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    aside {
+        width: 38vw;
+    }
+}
+
 
 .important {
     font-weight: 600;
@@ -432,78 +507,10 @@ aside.closed .card:hover div:nth-child(3) {
     .line.small {
         width: 90vw;
     }
-
-    aside.closed .side-link li .sub-menu {
-        display: none;
-    }
-
-    aside {
-        width: 45vw;
-    }
-
-    aside a {
-        line-height: 30px;
-        gap: 5px;
-
-        padding-left: 4px;
-    }
-
-    aside .sub-menu a {
-        gap: 7px;
-    }
-
-    aside .link_name {
-        font-size: 15px;
-    }
-
-    aside .icon-link {
-        padding-right: 5px;
-    }
-
-    aside i.fa-solid {
-        width: 5vh;
-        font-size: 20px;
-    }
-
-    aside .sub-menu a {
-        font-size: 11px;
-
-        /*padding-left: 4vw;*/
-    }
-
-    aside .sub-menu i.fa-solid {
-        font-size: 15px;
-    }
-
-    aside.closed {
-        width: 0;
-    }
-
-    aside.closed .side-link{
-        display: none;
-    }
-
-    aside.closed .card{
-        position: absolute;
-        top: 90px;
-        left: 1vw;
-    }
-
-    aside .side-link i.fa-chevron-down {
-        font-size: 16px;
-    }
 }
 
 @media screen and (min-width: 770px) and (max-width: 1360px) {
     main {
         padding: 15vh 2vw 0 9vw;
-    }
-
-    aside{
-        width: 30vw;
-    }
-
-    aside i.fa-solid {
-        font-size: 23px;
     }
 }
